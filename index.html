@@ -4,9 +4,11 @@
 <head>
     <!-- Metas -->
     <meta charset="utf-8">
-    <title>Harry Kwan</title>
-    <meta name="description" content="">
+    <title>Harry Kwan 關誌諾 | Singer-Songwriter & Music Producer</title>
+    <meta name="description"
+        content="Harry Kwan 關誌諾 - 唱作人/軟件工程師。近期作品：陳柏宇《一天》、林奕匡《無題時想起的人》、Anson Lo《致我》">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Harry Kwan, 關誌諾, singer songwriter, music producer, Hong Kong music">
     <!-- Css -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/base.css" rel="stylesheet" type="text/css" media="all" />
@@ -14,7 +16,453 @@
     <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/magnific-popup.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/fonts.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link
+        href="//fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        /* ========================================
+           HARRY KWAN - MODERN MUSIC PROFILE
+           Cohesive Dark Theme with Gold Accents
+           ======================================== */
+        
+        :root {
+            --accent-gold: #c9a962;
+            --accent-gold-light: #d4af37;
+            --accent-purple: #8b5cf6;
+            --dark-bg: #0a0a0a;
+            --dark-surface: #111111;
+            --dark-card: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.7);
+            --text-muted: rgba(255, 255, 255, 0.4);
+            --gradient-gold: linear-gradient(135deg, #c9a962 0%, #d4af37 100%);
+            --gradient-dark: linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --glow-gold: 0 0 30px rgba(201, 169, 98, 0.3);
+        }
+
+        /* Base Overrides */
+        body {
+            background: var(--dark-bg);
+            color: var(--text-primary);
+        }
+
+        section {
+            background: var(--dark-bg);
+        }
+
+        .main {
+            background: var(--dark-bg) !important;
+        }
+
+        .brd-bottom {
+            border-bottom: 1px solid var(--border-subtle) !important;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        p, span, a, li {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero-content h1.large {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            letter-spacing: 0.15em;
+            font-weight: 600;
+            text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+        }
+
+        .hero-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.3rem;
+            letter-spacing: 0.5em;
+            color: var(--accent-gold);
+            margin-top: 1rem;
+            text-shadow: 0 2px 10px rgba(201, 169, 98, 0.3);
+        }
+
+        .hero .h4 {
+            color: var(--text-secondary);
+            font-weight: 300;
+            letter-spacing: 0.3em;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Section Styling */
+        .section-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: var(--gradient-gold);
+            color: #000;
+            font-size: 0.7rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border-radius: 2px;
+        }
+
+        .block-title h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--text-primary);
+        }
+
+        .block-title h6 {
+            color: var(--accent-gold) !important;
+            letter-spacing: 0.2em;
+        }
+
+        /* Works Section */
+        .works-section {
+            background: var(--gradient-dark);
+            padding: 100px 0;
+        }
+
+        .work-card {
+            background: var(--dark-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .work-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-gold);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .work-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(201, 169, 98, 0.3);
+            box-shadow: var(--glow-gold);
+        }
+
+        .work-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .work-card .artist-name {
+            color: var(--accent-gold);
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .work-card .song-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .work-card .role-tag {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: rgba(139, 92, 246, 0.15);
+            color: #a78bfa;
+            font-size: 0.7rem;
+            border-radius: 20px;
+            margin-top: 1rem;
+            letter-spacing: 0.05em;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .work-card.highlight {
+            border: 1px solid rgba(201, 169, 98, 0.4);
+            background: linear-gradient(135deg, rgba(201, 169, 98, 0.08) 0%, var(--dark-card) 100%);
+        }
+
+        .work-card.highlight::before {
+            transform: scaleX(1);
+        }
+
+        .work-card.highlight::after {
+            content: '★';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            color: var(--accent-gold);
+            font-size: 1rem;
+        }
+
+        /* Photo Gallery */
+        .photo-showcase {
+            padding: 100px 0;
+            background: var(--dark-surface);
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .photo-grid .photo-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            aspect-ratio: 1;
+            cursor: pointer;
+        }
+
+        .photo-grid .photo-item.featured {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .photo-grid .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .photo-grid .photo-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .photo-grid .photo-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.6) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .photo-grid .photo-item:hover::after {
+            opacity: 1;
+        }
+
+        /* Popup Lightbox Styling */
+        .mfp-bg {
+            background: rgba(0, 0, 0, 0.95);
+        }
+
+        .mfp-image-holder .mfp-close,
+        .mfp-iframe-holder .mfp-close {
+            color: var(--accent-gold);
+            font-size: 2rem;
+        }
+
+        /* About Section */
+        .bio-modern {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            line-height: 2.2;
+            color: var(--text-secondary);
+        }
+
+        .bio-highlight {
+            color: var(--accent-gold);
+            font-weight: 500;
+        }
+
+        /* Decorative Elements */
+        .music-note-decoration {
+            position: absolute;
+            font-size: 10rem;
+            opacity: 0.02;
+            font-family: serif;
+            color: var(--accent-gold);
+        }
+
+        .equalizer-bars {
+            display: flex;
+            align-items: flex-end;
+            gap: 4px;
+            height: 30px;
+            margin: 0 auto 1.5rem;
+            justify-content: center;
+        }
+
+        .equalizer-bars span {
+            width: 4px;
+            background: var(--gradient-gold);
+            border-radius: 2px;
+            animation: equalizer 1.2s ease-in-out infinite;
+        }
+
+        .equalizer-bars span:nth-child(1) { height: 60%; animation-delay: 0s; }
+        .equalizer-bars span:nth-child(2) { height: 100%; animation-delay: 0.1s; }
+        .equalizer-bars span:nth-child(3) { height: 40%; animation-delay: 0.2s; }
+        .equalizer-bars span:nth-child(4) { height: 80%; animation-delay: 0.3s; }
+        .equalizer-bars span:nth-child(5) { height: 50%; animation-delay: 0.4s; }
+
+        @keyframes equalizer {
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(0.3); }
+        }
+
+        /* Experience/Tour Section */
+        .tour {
+            background: var(--dark-bg) !important;
+        }
+
+        .block-tabs .active h4 {
+            color: var(--accent-gold) !important;
+        }
+
+        .block-tabs h4 {
+            color: var(--text-muted);
+            transition: color 0.3s ease;
+        }
+
+        .block-tour {
+            border-left: 2px solid var(--border-subtle);
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .block-tour:hover {
+            border-left-color: var(--accent-gold);
+        }
+
+        .block-tour h3 {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .block-tour h5 {
+            color: var(--text-primary);
+        }
+
+        /* Buttons */
+        .expand-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: transparent;
+            border: 1px solid var(--border-subtle);
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .expand-btn:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+            box-shadow: var(--glow-gold);
+        }
+
+        .expand-btn .arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .expand-btn.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        /* Collapsible Sections */
+        .collapsible-section {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .collapsible-section.expanded {
+            max-height: 3000px;
+            opacity: 1;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: var(--dark-surface) !important;
+        }
+
+        #contact .card {
+            background: var(--dark-card) !important;
+            border: 1px solid var(--border-subtle) !important;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-bg) !important;
+        }
+
+        /* Social Links */
+        .block-social a {
+            color: var(--text-secondary);
+            transition: all 0.3s ease;
+        }
+
+        .block-social a:hover {
+            color: var(--accent-gold);
+            transform: translateY(-3px);
+        }
+
+        /* Header/Nav */
+        .main-menu a {
+            color: var(--text-secondary) !important;
+            letter-spacing: 0.1em;
+            font-size: 0.85rem;
+            transition: color 0.3s ease;
+        }
+
+        .main-menu a:hover {
+            color: var(--accent-gold) !important;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1.large {
+                font-size: 2.5rem;
+                letter-spacing: 0.1em;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+                letter-spacing: 0.3em;
+            }
+
+            .photo-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+
+            .photo-grid .photo-item.featured {
+                grid-column: span 2;
+                grid-row: span 1;
+                aspect-ratio: 16/9;
+            }
+
+            .work-card .song-title {
+                font-size: 1.3rem;
+            }
+
+            .bio-modern {
+                font-size: 1rem;
+                line-height: 1.9;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -39,7 +487,7 @@
                 <ul class="slides">
                     <li>
                         <div class="background-img overlay zoom">
-                            <img src="ghost.jpg" alt="">
+                            <img src="photo2026/WhatsApp%20Image%202025-02-02%20at%2020.07.19.jpeg" alt="Harry Kwan">
                         </div>
                         <!--Container-->
                         <div class="container hero-content">
@@ -49,7 +497,8 @@
                                     <!--Inner hero-->
                                     <div class="inner-hero">
                                         <h1 class="large text-white  mb-0">Harry Kwan</h1>
-                                        <h4 class="uppercase h4">singer · songwriter</h4>
+                                        <p class="hero-subtitle">關誌諾</p>
+                                        <h4 class="uppercase h4">singer · songwriter · music producer</h4>
                                         <a class="video-play-but mt-4 " target="_blank"
                                             href="https://www.instagram.com/harry.kwan"></a>
                                     </div>
@@ -85,9 +534,9 @@
                                 <ul class="main-menu list-inline">
                                     <li><a class="scroll list-inline-item" href="#wrapper">Home</a></li>
                                     <li><a class="scroll list-inline-item" href="#about">About</a></li>
+                                    <li><a class="scroll list-inline-item" href="#works">Works</a></li>
+                                    <li><a class="scroll list-inline-item" href="#gallery">Gallery</a></li>
                                     <li><a class="scroll list-inline-item" href="#tour">Experience</a></li>
-                                    <li><a class="scroll list-inline-item"
-                                            href="https://www.instagram.com/harry.kwan">Listen</a></li>
                                     <li><a class="scroll list-inline-item" href="#contact">Contact</a></li>
                                 </ul>
                             </nav>
@@ -103,30 +552,34 @@
         <!--About section-->
         <section id="about" class="about main brd-bottom">
             <img class="pattern-center" src="img/right-pattern.png" alt="">
+            <span class="music-note-decoration" style="top: 10%; left: 5%;">♪</span>
+            <span class="music-note-decoration" style="bottom: 10%; right: 5%;">♫</span>
             <!--Container-->
             <div class="container ">
                 <!--Row-->
                 <div class="row vertical-align">
-                    <div class="col-md-6    ">
-                        <div class="block-content text-center">
-                            <h1 class="uppercase mb-0">About Me</h1>
-                            <p class="mt-2 lead w-95">
-                                Passionate in live performing, song writing and arranging recently. For live
-                                performance, i usually sing and play the keyboard or acoustic guitar. TW Pop, Jazz and
-                                Neo
-                                Soul are the genre I have been mainly influenced by.
-                                <br>
-                                <img style="filter: invert(100%); " class="sing mb-0" src="signature.png" alt="Harry">
-                            </p>
-
+                    <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
+                        <div class="block-content">
+                            <img src="photo2026/DSCF4215.jpg" alt="Harry Kwan"
+                                style="width: 100%; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.5);">
                         </div>
                     </div>
-                    <div class="col-md-6 offset-md-1   " hidden>
+                    <div class="col-lg-6 offset-lg-1 col-md-12">
                         <div class="block-content">
-                            <ul class="block-images row">
-                                <!-- <li class="col-md-6 col-sm-6"><img src="piano.JPG" alt=""> </li> -->
-                                <li class="col-md-6 col-sm-6"><img src="piano2.JPG" alt=""> </li>
-                            </ul>
+                            <div class="equalizer-bars">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <h1 class="uppercase mb-0" style="font-family: 'Playfair Display', serif;">About Me</h1>
+                            <p class="mt-4 bio-modern">
+                                <span class="bio-highlight">Harry Kwan 關誌諾</span>，唱作人 / 軟件工程師。
+                                <br><br>
+                                因喜愛音樂，大學畢業後繼續鑽研音樂製作。
+                                <br><br>
+                                專注於現場演出、作曲及編曲工作。演出時通常彈奏鍵盤或木結他伴唱。主要受到台灣流行音樂、Jazz 及 Neo Soul 影響。
+                            </p>
+                            <br>
+                            <img style="filter: invert(100%); margin-top: 2rem;" class="sing mb-0" src="signature.png"
+                                alt="Harry">
                         </div>
                     </div>
                 </div>
@@ -192,6 +645,284 @@
             <!--End container-->
         </section>
         <!--End about section-->
+
+        <!--Works Section - Recent Collaborations-->
+        <section id="works" class="works-section main">
+            <!--Container-->
+            <div class="container">
+                <!--Row-->
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-9">
+                        <div class="block-content text-center gap-one-bottom-md">
+                            <div class="section-badge">Recent Works</div>
+                            <h1 class="uppercase mb-0" style="font-family: 'Playfair Display', serif;">參與作品</h1>
+                            <p class="mt-3" style="color: rgba(255,255,255,0.6);">近年創作及參與的音樂作品</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End row-->
+
+                <!--Featured Show - Most Important-->
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-10 col-md-12">
+                        <div class="work-card highlight" style="padding: 2.5rem;">
+                            <div class="artist-name">TYoG! 計劃 × BGCA</div>
+                            <div class="song-title" style="font-size: 2.2rem;">New Gen Live Show《Breathing》</div>
+                            <p style="color: rgba(255,255,255,0.5); font-size: 0.95rem;">2024.11.24 | 麥花臣場館 MacPherson
+                                Stadium</p>
+                            <div style="margin-top: 1.2rem;">
+                                <span class="role-tag" style="margin-right: 0.5rem;">Performer</span>
+                                <span class="role-tag" style="margin-right: 0.5rem;">Theme Song Writer</span>
+                                <span class="role-tag">Arranger</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Songwriting Credits - Important-->
+                <div class="row justify-content-center mb-3">
+                    <div class="col-12 text-center">
+                        <h6 class="uppercase" style="color: var(--accent-gold); letter-spacing: 0.2em;">作曲 Songwriting
+                        </h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="work-card highlight">
+                            <div class="artist-name">陳柏宇 Jason Chan</div>
+                            <div class="song-title">《一天》</div>
+                            <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">2025</p>
+                            <span class="role-tag">作曲 Composer</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="work-card highlight">
+                            <div class="artist-name">林奕匡 Phil Lam</div>
+                            <div class="song-title">《無題時想起的人》</div>
+                            <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">2025</p>
+                            <span class="role-tag">作曲 Composer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--TV Competition Achievement-->
+                <div class="row justify-content-center mt-4 mb-3">
+                    <div class="col-12 text-center">
+                        <h6 class="uppercase" style="color: var(--accent-gold); letter-spacing: 0.2em;">🏆 Competition
+                        </h6>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-10 mb-4">
+                        <div class="work-card highlight" style="border-color: #c9a962;">
+                            <div class="artist-name" style="color: #c9a962;">ViuTV</div>
+                            <div class="song-title">全民造星 6</div>
+                            <p style="color: rgba(255,255,255,0.7); font-size: 1rem; font-weight: 500;">🎖️ 30強 Top 30
+                                Finalist</p>
+                            <span class="role-tag"
+                                style="background: rgba(201, 169, 98, 0.3); color: #c9a962;">2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Commercial & Brand Collaboration-->
+                <div class="row justify-content-center mt-4 mb-3">
+                    <div class="col-12 text-center">
+                        <h6 class="uppercase" style="color: var(--accent-gold); letter-spacing: 0.2em;">📺 Commercial &
+                            Brand</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="work-card highlight">
+                            <div class="artist-name" style="color: #FFC72C;">McDonald's HK 🍟</div>
+                            <div class="song-title">廣告演出</div>
+                            <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">Advertisement</p>
+                            <span class="role-tag" style="background: rgba(255, 199, 44, 0.2); color: #FFC72C;">Featured
+                                Artist</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="work-card highlight">
+                            <div class="artist-name" style="color: #FFC72C;">McDonald's HK 🍟</div>
+                            <div class="song-title">SUCH A Goooood Festival</div>
+                            <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">太古糖廠街市集 Busking Performance</p>
+                            <span class="role-tag" style="background: rgba(255, 199, 44, 0.2); color: #FFC72C;">Live
+                                Performer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Featured Performance-->
+                <div class="row justify-content-center mt-4 mb-3">
+                    <div class="col-12 text-center">
+                        <h6 class="uppercase" style="color: var(--accent-gold); letter-spacing: 0.2em;">🎤 Featured
+                            Performance</h6>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-10 mb-4">
+                        <div class="work-card highlight">
+                            <div class="artist-name">叱咤903</div>
+                            <div class="song-title">Tribute to Khalil Fong</div>
+                            <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">叱咤903 Tribute Concert</p>
+                            <span class="role-tag" style="background: rgba(201, 169, 98, 0.2); color: #c9a962;">Vocal
+                                Performance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Expand Button-->
+                <div class="row justify-content-center mt-4">
+                    <div class="col-12 text-center">
+                        <button class="expand-btn" onclick="toggleMoreWorks()">
+                            <span>More Works</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!--Collapsible Section - Recording & Backing Vocals-->
+                <div id="moreWorks" class="collapsible-section">
+                    <div class="row justify-content-center mt-5 mb-3">
+                        <div class="col-12 text-center">
+                            <h6 class="uppercase" style="color: var(--accent-gold); letter-spacing: 0.2em;">Recording &
+                                Backing Vocals</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="work-card">
+                                <div class="artist-name">姜濤 Keung To</div>
+                                <div class="song-title">《以父之名》</div>
+                                <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">Keung To Concert 2025</p>
+                                <span class="role-tag">Backing Vocals</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="work-card">
+                                <div class="artist-name">Anson Lo 盧瀚霆</div>
+                                <div class="song-title">《致我》</div>
+                                <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">2024</p>
+                                <div style="margin-top: 0.5rem;">
+                                    <span class="role-tag" style="margin-right: 0.3rem;">Programmer</span>
+                                    <span class="role-tag">Backing Vocals</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="work-card">
+                                <div class="artist-name">Edan 呂爵安</div>
+                                <div class="song-title">《我以為可以》</div>
+                                <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">Recording</p>
+                                <span class="role-tag">Backing Vocals</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="work-card">
+                                <div class="artist-name">Edan 呂爵安</div>
+                                <div class="song-title">《你應該是這世界上最懂我的人啊？》</div>
+                                <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">Recording</p>
+                                <span class="role-tag">Backing Vocals</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Listen Links-->
+                <div class="row justify-content-center mt-5">
+                    <div class="col-12 col-md-8 text-center">
+                        <h6 class="uppercase mb-4" style="color: var(--accent-gold); letter-spacing: 0.2em;">Listen on
+                        </h6>
+                        <ul class="block-social list-inline">
+                            <li class="list-inline-item mr-3"><a
+                                    href="https://open.spotify.com/artist/6lSKwnIlQ1tV7duKupJsiI?si=q7GVL5zHSyOFiQ1wuFi0tQ"
+                                    target="_blank" style="font-size: 2rem;"><i class="socicon-spotify"></i></a></li>
+                            <li class="list-inline-item mr-3"><a
+                                    href="https://www.youtube.com/channel/UCesflgWO_9u1iQj9sovZnMw" target="_blank"
+                                    style="font-size: 2rem;"><i class="socicon-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--End container-->
+        </section>
+        <!--End works section-->
+
+        <!--Photo Gallery Section-->
+        <section id="gallery" class="photo-showcase main">
+            <!--Container-->
+            <div class="container">
+                <!--Row-->
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-9">
+                        <div class="block-content text-center gap-one-bottom-md">
+                            <div class="section-badge">Gallery</div>
+                            <h1 class="uppercase mb-0" style="font-family: 'Playfair Display', serif;">Photos</h1>
+                        </div>
+                    </div>
+                </div>
+                <!--End row-->
+                <div class="photo-grid">
+                    <div class="photo-item featured">
+                        <a href="photo2026/EDD_8292.JPG" class="popup-image">
+                            <img src="photo2026/EDD_8292.JPG" alt="Harry Kwan">
+                        </a>
+                    </div>
+                    <div class="photo-item">
+                        <a href="photo2026/EDD_8183.JPG" class="popup-image">
+                            <img src="photo2026/EDD_8183.JPG" alt="Harry Kwan">
+                        </a>
+                    </div>
+                    <div class="photo-item">
+                        <a href="photo2026/DSCF4215.jpg" class="popup-image">
+                            <img src="photo2026/DSCF4215.jpg" alt="Harry Kwan">
+                        </a>
+                    </div>
+                    <div class="photo-item">
+                        <a href="photo2026/IMG_0690.jpg" class="popup-image">
+                            <img src="photo2026/IMG_0690.jpg" alt="Harry Kwan">
+                        </a>
+                    </div>
+                    <div class="photo-item">
+                        <a href="photo2026/IMG_1093.jpg" class="popup-image">
+                            <img src="photo2026/IMG_1093.jpg" alt="Harry Kwan">
+                        </a>
+                    </div>
+                    <div class="photo-item">
+                        <a href="photo2026/IMG_2390.JPG" class="popup-image">
+                            <img src="photo2026/IMG_2390.JPG" alt="Harry Kwan">
+                        </a>
+                    </div>
+                    <div class="photo-item">
+                        <a href="photo2026/WhatsApp%20Image%202025-02-02%20at%2020.07.18.jpeg" class="popup-image">
+                            <img src="photo2026/WhatsApp%20Image%202025-02-02%20at%2020.07.18.jpeg" alt="Harry Kwan">
+                        </a>
+                    </div>
+                    <div class="photo-item">
+                        <a href="photo2026/WhatsApp%20Image%202025-02-02%20at%2020.07.18%20(1).jpeg"
+                            class="popup-image">
+                            <img src="photo2026/WhatsApp%20Image%202025-02-02%20at%2020.07.18%20(1).jpeg"
+                                alt="Harry Kwan">
+                        </a>
+                    </div>
+                    <div class="photo-item">
+                        <a href="photo2026/WhatsApp%20Image%202025-02-02%20at%2020.07.19.jpeg" class="popup-image">
+                            <img src="photo2026/WhatsApp%20Image%202025-02-02%20at%2020.07.19.jpeg" alt="Harry Kwan">
+                        </a>
+                    </div>
+                    <div class="photo-item">
+                        <a href="photo2026/WhatsApp%20Image%202025-02-02%20at%2020.07.19%20(1).jpeg"
+                            class="popup-image">
+                            <img src="photo2026/WhatsApp%20Image%202025-02-02%20at%2020.07.19%20(1).jpeg"
+                                alt="Harry Kwan">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--End container-->
+        </section>
+        <!--End photo gallery section-->
 
         <!--Discography section-->
         <section id="discography" class="discography main" hidden>
@@ -377,20 +1108,16 @@
         </section>
         <!--End band members section-->
         <!--Tours section-->
-        <section id="tour" class="tour  main">
+        <section id="tour" class="tour main" style="background: linear-gradient(180deg, #0a0a0a 0%, #000 100%);">
             <!--Container-->
             <div class="container">
                 <!--Row-->
                 <div class="row justify-content-center ">
                     <div class="col-12 col-md-10 col-lg-9">
-                        <div class="block-content  gap-one-bottom-md text-center">
-                            <div class="block-title ">
-                                <div class="block-bars">
-                                    <img src="img/sound-bars.png" alt="">
-                                </div>
-                                <!-- <h6 class="uppercase mb-1">reservation info</h6> -->
-                                <h1 class="uppercase mb-0">Performing Experience</h1>
-                            </div>
+                        <div class="block-content gap-one-bottom-md text-center">
+                            <div class="section-badge">Experience</div>
+                            <h1 class="uppercase mb-0" style="font-family: 'Playfair Display', serif;">演出經歷</h1>
+                            <p class="mt-3" style="color: rgba(255,255,255,0.6);">Live Performances & Competitions</p>
                         </div>
                     </div>
                 </div>
@@ -413,24 +1140,62 @@
                         <ul class="block-tab">
                             <!--Tab-->
                             <li class="active ">
-                                <div class="block-content   text-left">
-                                    <div class="block-content block-tour">
+                                <div class="block-content text-left">
+                                    <!-- Recent 2024 Performances - Shown by default -->
+                                    <div class="block-content block-tour"
+                                        style="border-left: 3px solid var(--accent-gold); margin-bottom: 1rem;">
                                         <div class="row">
                                             <div class="col-lg-3 col-md-3 text-center ">
-                                                <h3>2024 </h3>
+                                                <h3 style="color: var(--accent-gold);">2024</h3>
                                             </div>
                                             <div class="col-lg-5 col-md-5">
                                                 <div class="block-content pl-5">
-                                                    <h5 class="mb-0  uppercase">FWD Luna New Year Party</h5>
-                                                    <span class="opc-50">Live Perform</span>
+                                                    <h5 class="mb-0 uppercase">New Gen Live Show《Breathing》</h5>
+                                                    <span class="opc-50">麥花臣場館 | Performer / Theme Song Writer /
+                                                        Arranger</span>
                                                 </div>
                                             </div>
-                                            <div class="col-12 col-lg-4 col-md-4 text-md-center">
-                                                <!-- <div class="block-content pr-4">
-                                                    <a class="btn-s uppercase btn  with-ico "
-                                                        href="https://www.instagram.com/p/CXyhwHhqTaj/"><i
-                                                            class="icon-video-1"></i>Video</a>
-                                                </div> -->
+                                        </div>
+                                    </div>
+                                    <div class="block-content block-tour">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-3 text-center ">
+                                                <h3>2024</h3>
+                                            </div>
+                                            <div class="col-lg-5 col-md-5">
+                                                <div class="block-content pl-5">
+                                                    <h5 class="mb-0 uppercase">Coda Jazz Kissa</h5>
+                                                    <span class="opc-50">西營盤 | Keyboard for Berklee Singer-Songwriters (Jiawen & Hilarie)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-content block-tour"
+                                        style="border-left: 3px solid #FFC72C; margin-bottom: 1rem;">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-3 text-center ">
+                                                <h3 style="color: #FFC72C;">2024</h3>
+                                            </div>
+                                            <div class="col-lg-5 col-md-5">
+                                                <div class="block-content pl-5">
+                                                    <h5 class="mb-0 uppercase" style="color: #FFC72C;">SUCH A Goooood
+                                                        Festival 🍟</h5>
+                                                    <span class="opc-50">McDonald's HK x 太古糖廠街市集 | Busking
+                                                        Performance</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-content block-tour">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-3 text-center ">
+                                                <h3>2024</h3>
+                                            </div>
+                                            <div class="col-lg-5 col-md-5">
+                                                <div class="block-content pl-5">
+                                                    <h5 class="mb-0 uppercase">FWD Lunar New Year Party</h5>
+                                                    <span class="opc-50">Live Performance</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -445,13 +1210,6 @@
                                                     <span class="opc-50">Live Perform</span>
                                                 </div>
                                             </div>
-                                            <div class="col-12 col-lg-4 col-md-4 text-md-center">
-                                                <!-- <div class="block-content pr-4">
-                                                    <a class="btn-s uppercase btn  with-ico "
-                                                        href="https://www.instagram.com/p/CXyhwHhqTaj/"><i
-                                                            class="icon-video-1"></i>Video</a>
-                                                </div> -->
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="block-content block-tour">
@@ -465,16 +1223,8 @@
                                                     <span class="opc-50">Live Perform</span>
                                                 </div>
                                             </div>
-                                            <div class="col-12 col-lg-4 col-md-4 text-md-center">
-                                                <!-- <div class="block-content pr-4">
-                                                    <a class="btn-s uppercase btn  with-ico "
-                                                        href="https://www.instagram.com/p/CXyhwHhqTaj/"><i
-                                                            class="icon-video-1"></i>Video</a>
-                                                </div> -->
-                                            </div>
                                         </div>
                                     </div>
-
                                     <div class="block-content block-tour">
                                         <div class="row">
                                             <div class="col-lg-3 col-md-3 text-center ">
@@ -482,307 +1232,222 @@
                                             </div>
                                             <div class="col-lg-5 col-md-5">
                                                 <div class="block-content pl-5">
-                                                    <h5 class="mb-0  uppercase"> 香港中文大學校友會</h5>
+                                                    <h5 class="mb-0  uppercase">香港中文大學校友會</h5>
                                                     <span class="opc-50">Live Perform</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-lg-4 col-md-4 text-md-center">
-                                                <!-- <div class="block-content pr-4">
-                                                    <a class="btn-s uppercase btn  with-ico "
-                                                        href="https://www.instagram.com/p/CXyhwHhqTaj/"><i
-                                                            class="icon-video-1"></i>Video</a>
-                                                </div> -->
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="block-content block-tour">
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-3 text-center ">
-                                                <h3>2023 </h3>
-                                            </div>
-                                            <div class="col-lg-5 col-md-5">
-                                                <div class="block-content pl-5">
-                                                    <h5 class="mb-0  uppercase">City Dancer Restaurant</h5>
-                                                    <span class="opc-50">Live Perform</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-lg-4 col-md-4 text-md-center">
-                                                <!-- <div class="block-content pr-4">
-                                                    <a class="btn-s uppercase btn  with-ico "
-                                                        href="https://www.instagram.com/p/CXyhwHhqTaj/"><i
-                                                            class="icon-video-1"></i>Video</a>
-                                                </div> -->
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="block-content block-tour">
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-3 text-center ">
-                                                <h3>2023 </h3>
-                                            </div>
-                                            <div class="col-lg-5 col-md-5">
-                                                <div class="block-content pl-5">
-                                                    <h5 class="mb-0  uppercase"> Rooot.hk</h5>
-                                                    <span class="opc-50">Live Perform</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-lg-4 col-md-4 text-md-center">
-                                                <!-- <div class="block-content pr-4">
-                                                    <a class="btn-s uppercase btn  with-ico "
-                                                        href="https://www.instagram.com/p/CXyhwHhqTaj/"><i
-                                                            class="icon-video-1"></i>Video</a>
-                                                </div> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="block-content block-tour">
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-3 text-center ">
-                                                <h3>2023 </h3>
-                                            </div>
-                                            <div class="col-lg-5 col-md-5">
-                                                <div class="block-content pl-5">
-                                                    <h5 class="mb-0  uppercase">青年樂隊馬拉松（伊館）</h5>
-                                                    <span class="opc-50">Live Perform</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-lg-4 col-md-4 text-md-center">
-                                                <!-- <div class="block-content pr-4">
-                                                    <a class="btn-s uppercase btn  with-ico "
-                                                        href="https://www.instagram.com/p/CXyhwHhqTaj/"><i
-                                                            class="icon-video-1"></i>Video</a>
-                                                </div> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="block-content block-tour">
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-3 text-center ">
-                                                <h3>2023 </h3>
-                                            </div>
-                                            <div class="col-lg-5 col-md-5">
-                                                <div class="block-content pl-5">
-                                                    <h5 class="mb-0  uppercase">H Coffee Shop The Corner</h5>
-                                                    <span class="opc-50">mini concert (originals)</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-lg-4 col-md-4 text-md-center">
-                                                <!-- <div class="block-content pr-4">
-                                                    <a class="btn-s uppercase btn  with-ico "
-                                                        href="https://www.instagram.com/p/CXyhwHhqTaj/"><i
-                                                            class="icon-video-1"></i>Video</a>
-                                                </div> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="block-content block-tour">
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-3 text-center ">
-                                                <h3>2022 </h3>
-                                            </div>
-                                            <div class="col-lg-5 col-md-5">
-                                                <div class="block-content pl-5">
-                                                    <h5 class="mb-0  uppercase">日出康城 商場</h5>
-                                                    <span class="opc-50">Live Perform</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-lg-4 col-md-4 text-md-center">
-                                                <!-- <div class="block-content pr-4">
-                                                    <a class="btn-s uppercase btn  with-ico "
-                                                        href="https://www.instagram.com/p/CXyhwHhqTaj/"><i
-                                                            class="icon-video-1"></i>Video</a>
-                                                </div> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="block-content block-tour">
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-3 text-center ">
-                                                <h3>2021 </h3>
-                                            </div>
-                                            <div class="col-lg-5 col-md-5">
-                                                <div class="block-content pl-5">
-                                                    <h5 class="mb-0  uppercase">ICMA 市集</h5>
-                                                    <span class="opc-50">Live Perform</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-lg-4 col-md-4 text-md-center">
-                                                <!-- <div class="block-content pr-4">
-                                                    <a class="btn-s uppercase btn  with-ico "
-                                                        href="https://www.instagram.com/p/CXyhwHhqTaj/"><i
-                                                            class="icon-video-1"></i>Video</a>
-                                                </div> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="block-content block-tour">
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-3 text-center ">
-                                                <h3>2021 </h3>
-                                            </div>
-                                            <div class="col-lg-5 col-md-5">
-                                                <div class="block-content pl-5">
-                                                    <h5 class="mb-0  uppercase">週末衣櫥</h5>
-                                                    <span class="opc-50">Live Perform</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-lg-4 col-md-4 text-md-center">
-                                                <!-- <div class="block-content pr-4">
-                                                    <a class="btn-s uppercase btn  with-ico "
-                                                        href="https://www.youtube.com/watch?v=T6y2Qnfdn1w&t=4309s"><i
-                                                            class="icon-video-1"></i>Video</a>
-                                                </div> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="block-content block-tour">
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-3 text-center ">
-                                                <h3>2021 </h3>
-                                            </div>
-                                            <div class="col-lg-5 col-md-5">
-                                                <div class="block-content pl-5">
-                                                    <h5 class="mb-0  uppercase">長髮村 Live</h5>
-                                                    <span class="opc-50">Youtube Live</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-lg-4 col-md-4 text-md-center">
-                                                <!-- <div class="block-content pr-4">
-                                                    <a class="btn-s uppercase btn  with-ico "
-                                                        href="https://www.youtube.com/watch?v=T6y2Qnfdn1w&t=4309s"><i
-                                                            class="icon-video-1"></i>Video</a>
-                                                </div> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="block-content block-tour">
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-3 text-center ">
-                                                <h3>2021 </h3>
-                                            </div>
-                                            <div class="col-lg-5 col-md-5">
-                                                <div class="block-content pl-5">
-                                                    <h5 class="mb-0  uppercase">TOYS TV Live</h5>
-                                                    <span class="opc-50">TOYSTV 生活 SHOW #03 </span>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-lg-4 col-md-4 text-md-center">
-                                                <!-- <div class="block-content pr-4">
-                                                    <a class="btn-s uppercase btn  with-ico "
-                                                        href="https://www.instagram.com/p/CXynrdxI9yz/"><i
-                                                            class="icon-video-1"></i>Video</a>
-                                                </div> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="block-content block-tour">
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-3 text-center ">
-                                                <h3>2020 </h3>
-                                            </div>
-                                            <div class="col-lg-5 col-md-5">
-                                                <div class="block-content pl-5">
-                                                    <h5 class="mb-0  uppercase">Zone D 同學會 Live</h5>
-                                                    <span class="opc-50">FBEAT Youtube Live </span>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-lg-4 col-md-4 text-md-center">
-                                                <!-- <div class="block-content pr-4">
-                                                    <a class="btn-s uppercase btn  with-ico "
-                                                        href="https://www.youtube.com/watch?v=yKcvms0TN6o&ab_channel=kclmusic"><i
-                                                            class="icon-video-1"></i>Video</a>
-                                                </div> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="block-content block-tour">
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-3 text-center ">
-                                                <h3>2020 </h3>
-                                            </div>
-                                            <div class="col-lg-5 col-md-5">
-                                                <div class="block-content pl-5">
-                                                    <h5 class="mb-0  uppercase">結節性硬化症發佈會</h5>
-                                                    <!-- <span class="opc-50">Music Night Every Wednesday </span> -->
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-lg-4 col-md-4 text-md-center">
-                                                <div class="block-content pr-4">
-                                                    <!-- <a class="btn-s uppercase btn  with-ico "
-                                                        href="https://www.youtube.com/watch?v=yKcvms0TN6o&ab_channel=kclmusic"><i
-                                                            class="icon-video-1"></i>Video</a> -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="block-content block-tour">
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-3 text-center ">
-                                                <h3>2020 </h3>
-                                            </div>
-                                            <div class="col-lg-5 col-md-5">
-                                                <div class="block-content pl-5">
-                                                    <h5 class="mb-0  uppercase">119 italio restaurant & bar</h5>
-                                                    <span class="opc-50">Music Night Every Wednesday </span>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-lg-4 col-md-4 text-md-center">
-                                                <div class="block-content pr-4">
-                                                    <!-- <a class="btn-s uppercase btn  with-ico "
-                                                        href="https://www.youtube.com/watch?v=yKcvms0TN6o&ab_channel=kclmusic"><i
-                                                            class="icon-video-1"></i>Video</a> -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="block-content block-tour">
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-3 text-center ">
-                                                <h3>2019 </h3>
-                                            </div>
-                                            <div class="col-lg-5 col-md-5">
-                                                <div class="block-content pl-5">
-                                                    <h5 class="mb-0  uppercase"> Live Cafe Rhythm</h5>
-                                                    <!-- <span class="opc-50">Music Night Every Wednesday </span> -->
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-lg-4 col-md-4 text-md-center">
-                                                <div class="block-content pr-4">
-                                                    <!-- <a class="btn-s uppercase btn  with-ico "
-                                                        href="https://www.youtube.com/watch?v=yKcvms0TN6o&ab_channel=kclmusic"><i
-                                                            class="icon-video-1"></i>Video</a> -->
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
+                                    <!-- Expand Button for Older Performances -->
+                                    <div class="text-center mt-4 mb-3">
+                                        <button class="expand-btn" onclick="toggleExperience()">
+                                            <span>View All Experience</span>
+                                            <span class="arrow">▼</span>
+                                        </button>
+                                    </div>
+
+                                    <!-- Collapsible Older Performances -->
+                                    <div id="moreExperience" class="collapsible-section">
+                                        <div class="block-content block-tour">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 text-center ">
+                                                    <h3>2023 </h3>
+                                                </div>
+                                                <div class="col-lg-5 col-md-5">
+                                                    <div class="block-content pl-5">
+                                                        <h5 class="mb-0  uppercase">City Dancer Restaurant</h5>
+                                                        <span class="opc-50">Live Perform</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="block-content block-tour">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 text-center ">
+                                                    <h3>2023 </h3>
+                                                </div>
+                                                <div class="col-lg-5 col-md-5">
+                                                    <div class="block-content pl-5">
+                                                        <h5 class="mb-0  uppercase">Rooot.hk</h5>
+                                                        <span class="opc-50">Live Perform</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="block-content block-tour">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 text-center ">
+                                                    <h3>2023 </h3>
+                                                </div>
+                                                <div class="col-lg-5 col-md-5">
+                                                    <div class="block-content pl-5">
+                                                        <h5 class="mb-0  uppercase">青年樂隊馬拉松（伊館）</h5>
+                                                        <span class="opc-50">Live Perform</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="block-content block-tour">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 text-center ">
+                                                    <h3>2023 </h3>
+                                                </div>
+                                                <div class="col-lg-5 col-md-5">
+                                                    <div class="block-content pl-5">
+                                                        <h5 class="mb-0  uppercase">H Coffee Shop The Corner</h5>
+                                                        <span class="opc-50">Mini Concert (Originals)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="block-content block-tour">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 text-center ">
+                                                    <h3>2022 </h3>
+                                                </div>
+                                                <div class="col-lg-5 col-md-5">
+                                                    <div class="block-content pl-5">
+                                                        <h5 class="mb-0  uppercase">日出康城商場</h5>
+                                                        <span class="opc-50">Live Perform</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="block-content block-tour">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 text-center ">
+                                                    <h3>2021 </h3>
+                                                </div>
+                                                <div class="col-lg-5 col-md-5">
+                                                    <div class="block-content pl-5">
+                                                        <h5 class="mb-0  uppercase">ICMA 市集</h5>
+                                                        <span class="opc-50">Live Perform</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="block-content block-tour">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 text-center ">
+                                                    <h3>2021 </h3>
+                                                </div>
+                                                <div class="col-lg-5 col-md-5">
+                                                    <div class="block-content pl-5">
+                                                        <h5 class="mb-0  uppercase">週末衣櫥</h5>
+                                                        <span class="opc-50">Live Perform</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="block-content block-tour">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 text-center ">
+                                                    <h3>2021 </h3>
+                                                </div>
+                                                <div class="col-lg-5 col-md-5">
+                                                    <div class="block-content pl-5">
+                                                        <h5 class="mb-0  uppercase">長髮村 Live</h5>
+                                                        <span class="opc-50">YouTube Live</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="block-content block-tour">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 text-center ">
+                                                    <h3>2021 </h3>
+                                                </div>
+                                                <div class="col-lg-5 col-md-5">
+                                                    <div class="block-content pl-5">
+                                                        <h5 class="mb-0  uppercase">TOYS TV Live</h5>
+                                                        <span class="opc-50">TOYSTV 生活 SHOW #03</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="block-content block-tour">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 text-center ">
+                                                    <h3>2020 </h3>
+                                                </div>
+                                                <div class="col-lg-5 col-md-5">
+                                                    <div class="block-content pl-5">
+                                                        <h5 class="mb-0  uppercase">Zone D 同學會 Live</h5>
+                                                        <span class="opc-50">FBEAT YouTube Live</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="block-content block-tour">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 text-center ">
+                                                    <h3>2020 </h3>
+                                                </div>
+                                                <div class="col-lg-5 col-md-5">
+                                                    <div class="block-content pl-5">
+                                                        <h5 class="mb-0  uppercase">結節性硬化症發佈會</h5>
+                                                        <span class="opc-50">Charity Event</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="block-content block-tour">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 text-center ">
+                                                    <h3>2020 </h3>
+                                                </div>
+                                                <div class="col-lg-5 col-md-5">
+                                                    <div class="block-content pl-5">
+                                                        <h5 class="mb-0  uppercase">119 Italio Restaurant & Bar</h5>
+                                                        <span class="opc-50">Music Night Every Wednesday</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="block-content block-tour">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 text-center ">
+                                                    <h3>2019 </h3>
+                                                </div>
+                                                <div class="col-lg-5 col-md-5">
+                                                    <div class="block-content pl-5">
+                                                        <h5 class="mb-0  uppercase">Live Cafe Rhythm</h5>
+                                                        <span class="opc-50">Live Performance</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Collapsible -->
+                                </div>
+                            </li>
+                            <li>
+                                <!--全民造星 6 - Highlight Achievement-->
+                                <div class="block-content text-left"
+                                    style="background: linear-gradient(135deg, rgba(201, 169, 98, 0.15), rgba(139, 92, 246, 0.1)); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; border-left: 3px solid #c9a962;">
                                     <div class="block-content block-tour">
                                         <div class="row">
                                             <div class="col-lg-3 col-md-3 text-center ">
-                                                <!-- <h3>2020 </h3> -->
+                                                <h3 style="color: #c9a962;">2025</h3>
                                             </div>
                                             <div class="col-lg-5 col-md-5">
                                                 <div class="block-content pl-5">
-                                                    ...
+                                                    <h5 class="mb-0 uppercase" style="color: #c9a962;">全民造星 6 (ViuTV)
+                                                    </h5>
+                                                    <span class="opc-50">Solo</span>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-lg-4 col-md-4 text-md-center">
-                                                <div class="block-content pr-4">
-                                                    <!-- <a class="btn-s uppercase btn  with-ico "
-                                                        href="https://www.youtube.com/watch?v=yKcvms0TN6o&ab_channel=kclmusic"><i
-                                                            class="icon-video-1"></i>Video</a> -->
+                                                <div class="block-content pr-4"
+                                                    style="color: #c9a962; font-weight: bold;">
+                                                    🏆 30強 Top 30
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <p class=" mb-0 text-center text-small"><span class="opc-50">The American Tour 2018
-                                        -</span> <a class="link mb-0" href="#">Booking Enqueries</a> </p> -->
-                            </li>
-                            <li>
+
                                 <div class="block-content  text-left">
                                     <div class="block-content block-tour">
                                         <div class="row">
@@ -1574,13 +2239,9 @@
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-10 col-lg-9 ">
                         <div class="block-content text-center gap-one-bottom-md">
-                            <div class="block-title ">
-                                <div class="block-bars">
-                                    <img src="img/sound-bars.png" alt="">
-                                </div>
-                                <h6 class="uppercase mb-1">contact with me</h6>
-                                <h1 class="uppercase mb-0">stay in touch</h1>
-                            </div>
+                            <div class="section-badge">Get In Touch</div>
+                            <h1 class="uppercase mb-0" style="font-family: 'Playfair Display', serif;">Contact</h1>
+                            <p class="mt-3" style="color: rgba(255,255,255,0.6);">Music Inquiries & Collaborations</p>
                         </div>
                     </div>
                 </div>
@@ -1594,11 +2255,14 @@
                         <ul class="feature-list feature-list-sm text-center row gap-one-bottom-sm">
 
                             <li class="col-sm-12  col-lg-12">
-                                <div class="card block-info text-center">
+                                <div class="card block-info text-center"
+                                    style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2rem;">
                                     <div class="card-body pt-0">
-                                        <p class="mb-0"><em class=" h5 mb-1 uppercase swap-color">Hong Kong</em>
-                                            <br> T+(852) 66581248
-                                            <br> hkclmusic@gmail.com
+                                        <p class="mb-0">
+                                            <em class="h5 mb-1 uppercase" style="color: var(--accent-gold);">Hong
+                                                Kong</em>
+                                            <br><br>
+                                            <span style="font-size: 1.1rem;">hkclmusic@gmail.com</span>
                                         </p>
                                     </div>
                                 </div>
@@ -1610,22 +2274,18 @@
                 <div class="row justify-content-center">
                     <div class="col-12">
                         <ul class="block-social  list-inline text-center mb-5">
-                            <!-- <li class="list-inline-item">
-                                <a href="https://www.facebook.com/harry.chan.77128" class="hover-effect"> <i
-                                        class="socicon-facebook"></i> </a>
-                            </li> -->
-                            <li class="list-inline-item">
-                                <a href="https://www.instagram.com/harry.kwan/" class="hover-effect"><i
-                                        class="socicon-instagram"></i> </a>
+                            <li class="list-inline-item mr-3">
+                                <a href="https://www.instagram.com/harry.kwan/" class="hover-effect"
+                                    style="font-size: 1.5rem;"><i class="socicon-instagram"></i></a>
                             </li>
-                            <!-- <li class="list-inline-item">
-                                <a href="https://www.youtube.com/channel/UCesflgWO_9u1iQj9sovZnMw"
-                                    class="hover-effect"><i class="socicon-youtube"></i> </a>
-                            </li> -->
-                            <!-- <li class="list-inline-item">
-                                <a href="https://open.spotify.com/artist/6lSKwnIlQ1tV7duKupJsiI" class="hover-effect"><i
-                                        class="socicon-spotify"></i> </a>
-                            </li> -->
+                            <li class="list-inline-item mr-3">
+                                <a href="https://open.spotify.com/artist/6lSKwnIlQ1tV7duKupJsiI" class="hover-effect"
+                                    style="font-size: 1.5rem;"><i class="socicon-spotify"></i></a>
+                            </li>
+                            <li class="list-inline-item mr-3">
+                                <a href="https://www.youtube.com/channel/UCesflgWO_9u1iQj9sovZnMw" class="hover-effect"
+                                    style="font-size: 1.5rem;"><i class="socicon-youtube"></i></a>
+                            </li>
 
 
                         </ul>
@@ -1641,7 +2301,15 @@
                 <div class="row justify-content-between align-items-center">
                     <div class="col-md-12 ">
                         <div class="block-content pt-5 brd-top">
-                            <br> &copy; 2021 all rights reserved - <em>Harry Kwan</em>.
+                            <p style="margin-bottom: 0.5rem; color: var(--accent-gold);">
+                                <span style="font-family: 'Playfair Display', serif; font-size: 1.2rem;">Harry Kwan
+                                    關誌諾</span>
+                            </p>
+                            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">
+                                Singer-Songwriter · Music Producer
+                            </p>
+                            <p style="font-size: 0.8rem; color: rgba(255,255,255,0.4); margin-top: 1rem;">
+                                &copy; 2026 All rights reserved - <em>Harry Kwan</em>
                             </p>
                         </div>
                     </div>
@@ -1663,6 +2331,53 @@
     <script src="js/jquery.countdown.min.js"></script>
     <script src="js/placeholders.min.js"></script>
     <script src="js/script.js"></script>
+    <!-- Custom Toggle Scripts -->
+    <script>
+        // Initialize Magnific Popup for Photo Gallery
+        $(document).ready(function() {
+            $('.photo-grid').magnificPopup({
+                delegate: 'a.popup-image',
+                type: 'image',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0, 1]
+                },
+                image: {
+                    tError: '<a href="%url%">The image</a> could not be loaded.',
+                    titleSrc: function(item) {
+                        return '';
+                    }
+                },
+                mainClass: 'mfp-fade',
+                removalDelay: 300,
+                callbacks: {
+                    open: function() {
+                        $('body').css('overflow', 'hidden');
+                    },
+                    close: function() {
+                        $('body').css('overflow', '');
+                    }
+                }
+            });
+        });
+
+        function toggleMoreWorks() {
+            const section = document.getElementById('moreWorks');
+            const btn = event.currentTarget;
+            section.classList.toggle('expanded');
+            btn.classList.toggle('active');
+            btn.querySelector('span:first-child').textContent = section.classList.contains('expanded') ? 'Show Less' : 'More Works';
+        }
+
+        function toggleExperience() {
+            const section = document.getElementById('moreExperience');
+            const btn = event.currentTarget;
+            section.classList.toggle('expanded');
+            btn.classList.toggle('active');
+            btn.querySelector('span:first-child').textContent = section.classList.contains('expanded') ? 'Show Less' : 'View All Experience';
+        }
+    </script>
     <!-- Google analytics -->
     <!-- End google analytics -->
 </body>
