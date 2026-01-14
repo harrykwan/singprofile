@@ -5,8 +5,7 @@
     <!-- Metas -->
     <meta charset="utf-8">
     <title>Harry Kwan 關誌諾 | Singer-Songwriter & Music Producer</title>
-    <meta name="description"
-        content="Harry Kwan 關誌諾 - 唱作人/軟件工程師。近期作品：陳柏宇《一天》、林奕匡《無題時想起的人》、Anson Lo《致我》">
+    <meta name="description" content="Harry Kwan 關誌諾 - 唱作人/軟件工程師。近期作品：陳柏宇《一天》、林奕匡《無題時想起的人》、Anson Lo《致我》">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Harry Kwan, 關誌諾, singer songwriter, music producer, Hong Kong music">
     <!-- Css -->
@@ -24,7 +23,7 @@
            HARRY KWAN - MODERN MUSIC PROFILE
            Cohesive Dark Theme with Gold Accents
            ======================================== */
-        
+
         :root {
             --accent-gold: #c9a962;
             --accent-gold-light: #d4af37;
@@ -60,11 +59,19 @@
         }
 
         /* Typography */
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Playfair Display', serif;
         }
 
-        p, span, a, li {
+        p,
+        span,
+        a,
+        li {
             font-family: 'Inter', sans-serif;
         }
 
@@ -74,7 +81,7 @@
             font-size: 5rem;
             letter-spacing: 0.15em;
             font-weight: 600;
-            text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+            text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
         }
 
         .hero-subtitle {
@@ -302,15 +309,41 @@
             animation: equalizer 1.2s ease-in-out infinite;
         }
 
-        .equalizer-bars span:nth-child(1) { height: 60%; animation-delay: 0s; }
-        .equalizer-bars span:nth-child(2) { height: 100%; animation-delay: 0.1s; }
-        .equalizer-bars span:nth-child(3) { height: 40%; animation-delay: 0.2s; }
-        .equalizer-bars span:nth-child(4) { height: 80%; animation-delay: 0.3s; }
-        .equalizer-bars span:nth-child(5) { height: 50%; animation-delay: 0.4s; }
+        .equalizer-bars span:nth-child(1) {
+            height: 60%;
+            animation-delay: 0s;
+        }
+
+        .equalizer-bars span:nth-child(2) {
+            height: 100%;
+            animation-delay: 0.1s;
+        }
+
+        .equalizer-bars span:nth-child(3) {
+            height: 40%;
+            animation-delay: 0.2s;
+        }
+
+        .equalizer-bars span:nth-child(4) {
+            height: 80%;
+            animation-delay: 0.3s;
+        }
+
+        .equalizer-bars span:nth-child(5) {
+            height: 50%;
+            animation-delay: 0.4s;
+        }
 
         @keyframes equalizer {
-            0%, 100% { transform: scaleY(1); }
-            50% { transform: scaleY(0.3); }
+
+            0%,
+            100% {
+                transform: scaleY(1);
+            }
+
+            50% {
+                transform: scaleY(0.3);
+            }
         }
 
         /* Experience/Tour Section */
@@ -573,7 +606,7 @@
                             <p class="mt-4 bio-modern">
                                 <span class="bio-highlight">Harry Kwan 關誌諾</span>，唱作人 / 軟件工程師。
                                 <br><br>
-                                因喜愛音樂，大學畢業後繼續鑽研音樂製作。
+                                因喜愛音樂，大學畢業後繼續鑽研音樂製作並加入EdwardMusicProduction/Publishing團隊。
                                 <br><br>
                                 專注於現場演出、作曲及編曲工作。演出時通常彈奏鍵盤或木結他伴唱。主要受到台灣流行音樂、Jazz 及 Neo Soul 影響。
                             </p>
@@ -1165,7 +1198,8 @@
                                             <div class="col-lg-5 col-md-5">
                                                 <div class="block-content pl-5">
                                                     <h5 class="mb-0 uppercase">Coda Jazz Kissa</h5>
-                                                    <span class="opc-50">西營盤 | Keyboard for Berklee Singer-Songwriters (Jiawen & Hilarie)</span>
+                                                    <span class="opc-50">西營盤 | Keyboard for Berklee Singer-Songwriters
+                                                        (Jiawen & Hilarie)</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -2334,7 +2368,7 @@
     <!-- Custom Toggle Scripts -->
     <script>
         // Initialize Magnific Popup for Photo Gallery
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('.photo-grid').magnificPopup({
                 delegate: 'a.popup-image',
                 type: 'image',
@@ -2345,17 +2379,17 @@
                 },
                 image: {
                     tError: '<a href="%url%">The image</a> could not be loaded.',
-                    titleSrc: function(item) {
+                    titleSrc: function (item) {
                         return '';
                     }
                 },
                 mainClass: 'mfp-fade',
                 removalDelay: 300,
                 callbacks: {
-                    open: function() {
+                    open: function () {
                         $('body').css('overflow', 'hidden');
                     },
-                    close: function() {
+                    close: function () {
                         $('body').css('overflow', '');
                     }
                 }
