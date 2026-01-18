@@ -16,7 +16,7 @@
     <link href="css/magnific-popup.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/fonts.css" rel="stylesheet" type="text/css" media="all" />
     <link
-        href="//fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap"
+        href="//fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <style>
         /* ========================================
@@ -46,7 +46,7 @@
         body {
             background: var(--bg-primary);
             color: var(--text-primary);
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Inter', sans-serif;
             font-weight: 300;
             letter-spacing: 0.02em;
             -webkit-font-smoothing: antialiased;
@@ -75,9 +75,9 @@
         h3,
         h4,
         h5 {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 300;
-            letter-spacing: 0.1em;
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            letter-spacing: 0.08em;
         }
 
         /* Hide original elements we don't need */
@@ -146,21 +146,21 @@
         }
 
         .hero-content h1.large {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 6rem;
-            font-weight: 300;
-            letter-spacing: 0.3em;
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
             margin-bottom: 0;
         }
 
         .hero-subtitle {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
-            letter-spacing: 0.6em;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 0.5em;
             color: var(--accent);
             margin-top: 1.5rem;
-            font-weight: 300;
+            font-weight: 400;
         }
 
         .hero .h4 {
@@ -196,6 +196,26 @@
 
         .main-menu a:hover {
             color: var(--accent) !important;
+        }
+
+        /* Signature Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .signature-logo {
+            height: 40px !important;
+            max-height: 40px !important;
+            width: auto !important;
+            filter: brightness(0) invert(1);
+            opacity: 0.85;
+            transition: opacity 0.3s ease, filter 0.3s ease;
+        }
+
+        .signature-logo:hover {
+            opacity: 1;
+            filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(212, 197, 169, 0.5));
         }
 
         /* Section Titles */
@@ -569,6 +589,379 @@
         }
 
         /* ========================================
+           TECH/ART VISUAL EFFECTS
+           ======================================== */
+
+        /* Chromatic Aberration / RGB Split on hover */
+        .hero .background-img {
+            position: relative;
+        }
+
+        .hero .background-img::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: inherit;
+            background-size: cover;
+            mix-blend-mode: screen;
+            opacity: 0;
+            animation: rgbShift 8s ease-in-out infinite;
+        }
+
+        @keyframes rgbShift {
+            0%, 100% { 
+                opacity: 0;
+                filter: hue-rotate(0deg);
+            }
+            50% { 
+                opacity: 0.03;
+                filter: hue-rotate(10deg);
+            }
+        }
+
+        /* Glitch/Resolution Effect on Hero Image */
+        .hero .background-img {
+            position: relative;
+        }
+
+        .hero .background-img::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: inherit;
+            background-size: cover;
+            background-position: center;
+            filter: url(#glitch-filter);
+            animation: glitchImage 8s ease-in-out infinite;
+            opacity: 0;
+            z-index: 1;
+        }
+
+        @keyframes glitchImage {
+            0%, 90%, 100% {
+                opacity: 0;
+                transform: translate(0);
+                clip-path: inset(0 0 0 0);
+            }
+            91% {
+                opacity: 1;
+                transform: translate(-5px, 2px);
+                clip-path: inset(20% 0 30% 0);
+                filter: hue-rotate(90deg) saturate(2);
+            }
+            92% {
+                opacity: 1;
+                transform: translate(5px, -2px);
+                clip-path: inset(50% 0 20% 0);
+                filter: hue-rotate(-90deg) saturate(1.5);
+            }
+            93% {
+                opacity: 1;
+                transform: translate(-3px, 0);
+                clip-path: inset(10% 0 60% 0);
+                filter: hue-rotate(45deg);
+            }
+            94% {
+                opacity: 0;
+                transform: translate(0);
+            }
+        }
+
+        /* RGB Split / Chromatic Aberration */
+        .hero .background-img img,
+        .hero .background-img {
+            animation: rgbSplit 12s ease-in-out infinite;
+        }
+
+        @keyframes rgbSplit {
+            0%, 95%, 100% {
+                filter: brightness(0.55) contrast(1.1);
+            }
+            96% {
+                filter: brightness(0.6) contrast(1.2) hue-rotate(5deg);
+                transform: translate(2px, 0);
+            }
+            97% {
+                filter: brightness(0.5) contrast(1.15) hue-rotate(-5deg);
+                transform: translate(-2px, 0);
+            }
+            98% {
+                filter: brightness(0.65) contrast(1.1);
+                transform: translate(1px, 1px);
+            }
+            99% {
+                filter: brightness(0.55) contrast(1.1);
+                transform: translate(0);
+            }
+        }
+
+        /* Horizontal glitch lines */
+        .hero .glitch-lines {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 3;
+            overflow: hidden;
+        }
+
+        .hero .glitch-lines::before,
+        .hero .glitch-lines::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.1);
+            animation: glitchLine 6s ease-in-out infinite;
+        }
+
+        .hero .glitch-lines::before {
+            top: 30%;
+            animation-delay: 0s;
+        }
+
+        .hero .glitch-lines::after {
+            top: 70%;
+            animation-delay: 3s;
+        }
+
+        @keyframes glitchLine {
+            0%, 90%, 100% {
+                transform: translateX(0) scaleX(0);
+                opacity: 0;
+            }
+            92% {
+                transform: translateX(-10%) scaleX(1);
+                opacity: 1;
+                background: rgba(0, 255, 255, 0.3);
+            }
+            94% {
+                transform: translateX(10%) scaleX(0.5);
+                opacity: 0.5;
+                background: rgba(255, 0, 100, 0.3);
+            }
+            96% {
+                transform: translateX(0) scaleX(0);
+                opacity: 0;
+            }
+        }
+
+        /* Static noise flicker */
+        .hero .noise-overlay {
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0;
+            pointer-events: none;
+            z-index: 2;
+            mix-blend-mode: overlay;
+            animation: noiseFlicker 8s steps(10) infinite;
+        }
+
+        @keyframes noiseFlicker {
+            0%, 89%, 100% { opacity: 0; }
+            90%, 95% { opacity: 0.15; }
+        }
+
+        /* Scanline overlay */
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0, 0, 0, 0.03) 2px,
+                rgba(0, 0, 0, 0.03) 4px
+            );
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        /* Noise/grain texture overlay */
+        .wrapper::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        /* Glitch effect on hero text */
+        .hero-content h1.large {
+            position: relative;
+            animation: textGlitch 10s ease-in-out infinite;
+        }
+
+        .hero-content h1.large::before,
+        .hero-content h1.large::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+
+        .hero-content h1.large::before {
+            color: #ff006e;
+            animation: glitchLeft 10s ease-in-out infinite;
+        }
+
+        .hero-content h1.large::after {
+            color: #00f5ff;
+            animation: glitchRight 10s ease-in-out infinite;
+        }
+
+        @keyframes textGlitch {
+            0%, 95%, 100% { transform: translate(0); }
+            96% { transform: translate(-2px, 1px); }
+            97% { transform: translate(2px, -1px); }
+            98% { transform: translate(-1px, 2px); }
+            99% { transform: translate(1px, -2px); }
+        }
+
+        @keyframes glitchLeft {
+            0%, 94%, 100% { opacity: 0; transform: translate(0); }
+            95% { opacity: 0.8; transform: translate(-3px, 0); }
+            96% { opacity: 0; transform: translate(0); }
+            97% { opacity: 0.5; transform: translate(-2px, 1px); }
+            98% { opacity: 0; }
+        }
+
+        @keyframes glitchRight {
+            0%, 94%, 100% { opacity: 0; transform: translate(0); }
+            95% { opacity: 0; }
+            96% { opacity: 0.8; transform: translate(3px, 0); }
+            97% { opacity: 0; transform: translate(0); }
+            98% { opacity: 0.5; transform: translate(2px, -1px); }
+            99% { opacity: 0; }
+        }
+
+        /* Photo gallery - tech aesthetic hover */
+        .photo-grid .photo-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .photo-grid .photo-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(255, 0, 110, 0.1) 0%,
+                transparent 50%,
+                rgba(0, 245, 255, 0.1) 100%
+            );
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 2;
+            mix-blend-mode: overlay;
+        }
+
+        .photo-grid .photo-item:hover::before {
+            opacity: 1;
+        }
+
+        .photo-grid .photo-item:hover img {
+            filter: grayscale(0%) contrast(1.1) saturate(1.2);
+        }
+
+        /* RGB split effect on photo hover */
+        .photo-grid .photo-item img {
+            transition: all 0.5s var(--transition), filter 0.3s ease;
+        }
+
+        .photo-grid .photo-item:hover img {
+            animation: photoGlitch 0.3s ease forwards;
+        }
+
+        @keyframes photoGlitch {
+            0% { filter: grayscale(0%); }
+            25% { filter: grayscale(0%) hue-rotate(5deg); }
+            50% { filter: grayscale(0%) hue-rotate(-5deg); }
+            75% { filter: grayscale(0%) hue-rotate(3deg); }
+            100% { filter: grayscale(0%) hue-rotate(0deg) contrast(1.1) saturate(1.2); }
+        }
+
+        /* Holographic accent line */
+        .work-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 0, 110, 0.5),
+                rgba(0, 245, 255, 0.5),
+                transparent
+            );
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.6s var(--transition);
+        }
+
+        .work-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        /* Cursor glow effect */
+        .cursor-glow {
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(
+                circle,
+                rgba(212, 197, 169, 0.08) 0%,
+                transparent 70%
+            );
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s ease;
+        }
+
+        /* Digital grid background for sections */
+        #works::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(212, 197, 169, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(212, 197, 169, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+        }
+
+        #works {
+            position: relative;
+        }
+
+        /* Accent color tweaks for tech feel */
+        .hero-subtitle {
+            background: linear-gradient(90deg, var(--accent), #00f5ff, var(--accent));
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 4s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { background-position: 0% center; }
+            50% { background-position: 100% center; }
+        }
+
+        /* ========================================
            APPLE-STYLE SCROLL ANIMATIONS
            ======================================== */
 
@@ -762,6 +1155,9 @@
                             style="background-image: url('photo2026/WhatsApp%20Image%202025-02-02%20at%2020.07.19.jpeg');">
                             <img src="photo2026/WhatsApp%20Image%202025-02-02%20at%2020.07.19.jpeg" alt="Harry Kwan">
                         </div>
+                        <!-- Glitch effect overlays -->
+                        <div class="glitch-lines"></div>
+                        <div class="noise-overlay"></div>
                         <!--Container-->
                         <div class="container hero-content">
                             <!--Row-->
@@ -794,7 +1190,7 @@
                     <div class="row">
                         <div class="col-lg-2">
                             <a class="scroll logo" href="#wrapper">
-                                <img class="mb-0" src="img/logo.png" alt="">
+                                <img class="mb-0 signature-logo" src="img/signature.png" alt="Harry Kwan">
                             </a>
                         </div>
                         <div class="col-lg-10 text-right">
@@ -833,7 +1229,7 @@
                 <div class="row vertical-align">
                     <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
                         <div class="block-content">
-                            <img src="photo2026/DSCF4215.jpg" alt="Harry Kwan"
+                            <img src="photo2026/bigme.JPG" alt="Harry Kwan"
                                 style="width: 100%; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.5);">
                         </div>
                     </div>
@@ -2705,6 +3101,45 @@
         tourItems.forEach((item, index) => {
             item.style.transitionDelay = `${index * 0.08}s`;
         });
+
+        // ========================================
+        // TECH/ART VISUAL EFFECTS
+        // ========================================
+
+        // Add data-text attribute for glitch effect
+        const heroTitle = document.querySelector('.hero-content h1.large');
+        if (heroTitle) {
+            heroTitle.setAttribute('data-text', heroTitle.textContent);
+        }
+
+        // Cursor glow effect
+        const cursorGlow = document.createElement('div');
+        cursorGlow.classList.add('cursor-glow');
+        document.body.appendChild(cursorGlow);
+
+        let mouseX = 0, mouseY = 0;
+        let glowX = 0, glowY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        // Smooth cursor follow
+        function animateCursor() {
+            glowX += (mouseX - glowX) * 0.1;
+            glowY += (mouseY - glowY) * 0.1;
+            cursorGlow.style.left = glowX + 'px';
+            cursorGlow.style.top = glowY + 'px';
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        // Hide cursor glow on mobile
+        if (window.innerWidth < 768) {
+            cursorGlow.style.display = 'none';
+        }
+
     </script>
     <!-- Google analytics -->
     <!-- End google analytics -->
